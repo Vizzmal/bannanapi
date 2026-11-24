@@ -56,7 +56,7 @@ Index: ethsw/rdkb_hal/src/ethsw/ccsp_hal_ethsw.c
  {
 @@ -169,7 +195,7 @@ CcspHalEthSwGetPortStatus
  #endif
-     else if (PortId == 1)
+     if (PortId == 1)
      {
 -	sprintf(ifName,"%s", "erouter0");
 +	sprintf(ifName,"%s", g_virtualIfName);
@@ -65,7 +65,7 @@ Index: ethsw/rdkb_hal/src/ethsw/ccsp_hal_ethsw.c
          sprintf(ifName, "lan%d", (PortId-1));
 @@ -331,7 +357,7 @@ CcspHalEthSwGetPortCfg
  #endif
-     else if (PortId == 1)
+     if (PortId == 1)
      {
 -        sprintf(ifName,"%s", "erouter0");
 +        sprintf(ifName,"%s", g_virtualIfName);
