@@ -6,10 +6,9 @@ Index: ethsw/rdkb_hal/src/ethsw/ccsp_hal_ethsw.c
  #ifdef THREE_GMACS_SUPPORT
      if(PortId == 5){
          sprintf(ifName,"%s", "eth3");
--    }else
-+    }
+     }else
  #endif
-+    else if (PortId == 1)
++    if (PortId == 1)
      {
 +	sprintf(ifName,"%s", "erouter0");
 +    }
@@ -21,10 +20,9 @@ Index: ethsw/rdkb_hal/src/ethsw/ccsp_hal_ethsw.c
  #ifdef THREE_GMACS_SUPPORT
      if(PortId == 5){
          sprintf(ifName,"%s", "eth3");
--    }else
-+    }
+     }else
  #endif
-+    else if (PortId == 1)
++    if (PortId == 1)
 +    {
 +        sprintf(ifName,"%s", "erouter0");
 +    }
